@@ -1,7 +1,5 @@
 package solution
 
-import "fmt"
-
 func Solution(H []int) int {
 	in := false
 	levels := make([]int, 0, len(H))
@@ -34,7 +32,6 @@ func isIn(slice []int, lev int) ([]int, bool) {
 			break
 		}
 	}
-	fmt.Printf("here is da level: %v\n", cutIdx)
 	slice = slice[:cutIdx]
 	return slice, in
 }
