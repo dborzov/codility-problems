@@ -18,6 +18,7 @@ func Solution(H []int) int {
 				res += 1
 			}
 		}
+		curlev = lev
 	}
 	return res
 }
@@ -35,6 +36,6 @@ func isIn(slice []int, lev int) ([]int, bool) {
 			break
 		}
 	}
-	slice = slice[:cutIdx]
+	slice = slice[:cutIdx+1]
 	return slice, in
 }
