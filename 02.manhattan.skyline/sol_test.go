@@ -41,15 +41,3 @@ func TestPit(t *testing.T) {
 	}
 
 }
-
-func TestEmptyTrimmer(t *testing.T) {
-	tSlice := []int{}
-	tLev := 4
-	tSlice, _ = isIn(tSlice, tLev)
-}
-
-func TestTrimmer(t *testing.T) {
-	tSlice := []int{2, 3, 4, 5}
-	tLev := 4
-	tSlice, _ = isIn(tSlice, tLev)
-}
