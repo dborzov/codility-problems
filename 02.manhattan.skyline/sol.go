@@ -2,12 +2,15 @@ package solution
 
 func Solution(H []int) int {
 	in := false
+
 	levels := make([]int, 0, len(H))
-	res := 0
-	curlev := -1
-	for lev := range H {
+	res := 1
+	curlev := H[0]
+
+	for _, lev := range H {
 		if lev > curlev {
-			levels = append(levels, lev)
+			levels = append(levels, curlev)
+			res++
 		}
 		if lev < curlev {
 			levels, in = isIn(levels, lev)
